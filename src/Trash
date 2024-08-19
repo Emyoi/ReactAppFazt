@@ -1,0 +1,91 @@
+{/*<>
+  <Button text='Click Me'/>
+  <Button text='Pay'/>
+  <Button text='Hello World' name='Joe'/>
+     <UserCard
+      name="Ryan Ray"
+      amount={3000}
+      married={true}
+      points={[99, 33.3, 22.2]}
+      address={{
+        street: "123 main street",
+        city: "New York",
+      }}
+    />
+
+    <UserCard
+      name='Carlos Bascktra'
+      amount={800}
+      married={false}
+      points={[88,55,86,20]}
+      address={{
+        street: '453 some street',
+        city: 'Washinton'
+      }}
+    /> 
+  </>*/}
+
+  <TaskCard ready={true} />
+    <Saludar />
+    <Button text="Saludar" />
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        console.log("envando datos del form");
+      }}
+    >
+      <h1>Registro de Usuario</h1>
+      <button>Enviar</button>
+    </form>
+
+
+{
+    const users = [
+    id: 1,
+    name: "Ryan ray",
+    image: "https://robohash.org/user",
+  },
+  {
+    id: 2,
+    name: "Joe",
+    image: "https://robohash.org/user2",
+  },{
+    id: 3,
+    name: "Tyler",
+    image: "https://robohash.org/user3",
+  },
+];
+
+{users.map((user, i) => {
+  return (
+    <div key={i}>
+      <h1>{user.name}</h1>
+      <img src={user.image} />
+    </div>
+  );
+})}
+
+<div>
+  <h1>Counter= {counter}</h1>
+  <button
+    onClick={() => {
+      setCounter(counter + 10);
+    }}
+  >
+    Sumar
+  </button>
+  <button
+    onClick={() => {
+      setCounter(counter - 10);
+    }}
+  >
+    Restar
+  </button>
+  <button
+    onClick={() => {
+      setCounter(1000);
+    }}
+  >
+    Reiniciar
+  </button>
+</div>
